@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Eat&Fly Restaurant Chain Design System - Professional Restaurant Brown Theme
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Clean white palette */
+    --background: 0 0% 100%;
+    --foreground: 126 16% 24%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 126 16% 24%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 126 16% 24%;
+
+    /* Primary - Professional Olive */
+    --primary: 126 16% 24%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 126 16% 34%;
+    --primary-dark: 126 16% 18%;
+
+    /* Secondary - Light Neutral */
+    --secondary: 120 5% 96%;
+    --secondary-foreground: 126 16% 24%;
+
+    /* Muted tones */
+    --muted: 120 8% 92%;
+    --muted-foreground: 126 8% 45%;
+
+    /* Accent - Soft Olive */
+    --accent: 126 20% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 126 20% 65%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Interface elements */
+    --border: 120 8% 85%;
+    --input: 120 8% 90%;
+    --ring: 126 16% 24%;
+
+    /* Custom gradients for visual appeal */
+    --gradient-primary: linear-gradient(135deg, hsl(126 16% 24%), hsl(126 16% 34%));
+    --gradient-hero: linear-gradient(135deg, hsl(126 16% 24%), hsl(126 20% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(120 5% 96%));
+    --gradient-accent: linear-gradient(135deg, hsl(126 20% 55%), hsl(126 20% 65%));
+
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 8px -2px hsl(126 16% 24% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(126 16% 24% / 0.12);
+    --shadow-strong: 0 8px 32px -8px hsl(126 16% 24% / 0.16);
+    --shadow-glow: 0 0 24px hsl(126 16% 24% / 0.2);
+
+    /* Smooth transitions */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 120 5% 96%;
+    --sidebar-foreground: 126 16% 24%;
+    --sidebar-primary: 126 16% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 8% 92%;
+    --sidebar-accent-foreground: 126 16% 24%;
+    --sidebar-border: 120 8% 85%;
+    --sidebar-ring: 126 16% 24%;
+  }
+
+  .dark {
+    /* Dark mode - Rich Dark Brown Restaurant Theme */
+    --background: 30 15% 8%;
+    --foreground: 35 25% 90%;
+
+    --card: 30 15% 10%;
+    --card-foreground: 35 25% 90%;
+
+    --popover: 30 15% 10%;
+    --popover-foreground: 35 25% 90%;
+
+    --primary: 30 45% 55%;
+    --primary-foreground: 30 15% 8%;
+    --primary-light: 30 45% 65%;
+    --primary-dark: 30 45% 45%;
+
+    --secondary: 30 15% 15%;
+    --secondary-foreground: 35 25% 90%;
+
+    --muted: 30 12% 18%;
+    --muted-foreground: 30 10% 65%;
+
+    --accent: 35 55% 70%;
+    --accent-foreground: 30 15% 8%;
+    --accent-light: 35 55% 80%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 30 12% 20%;
+    --input: 30 12% 18%;
+    --ring: 30 45% 55%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(30 45% 55%), hsl(30 45% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(30 45% 55%), hsl(35 55% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(30 15% 10%), hsl(30 15% 12%));
+    --gradient-accent: linear-gradient(135deg, hsl(35 55% 70%), hsl(35 55% 80%));
+
+    /* Dark mode shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 24px hsl(30 45% 55% / 0.3);
+    --sidebar-background: 30 15% 10%;
+    --sidebar-foreground: 35 25% 90%;
+    --sidebar-primary: 30 45% 55%;
+    --sidebar-primary-foreground: 30 15% 8%;
+    --sidebar-accent: 30 12% 18%;
+    --sidebar-accent-foreground: 35 25% 90%;
+    --sidebar-border: 30 12% 20%;
+    --sidebar-ring: 30 45% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
