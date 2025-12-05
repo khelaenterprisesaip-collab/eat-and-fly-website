@@ -18,18 +18,18 @@ const contactSchema = z.object({
   phone: z.string().min(10, "Phone number must be at least 10 digits"),
   subject: z.string().min(5, "Subject must be at least 5 characters"),
   message: z.string().min(20, "Message must be at least 20 characters"),
-  outlet: z.string().min(1, "Please select an outlet")
+  outlet: z.string().min(1, "Please select an outlet"),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const outlets = [
   "Amritsar Airport",
-  "Ghaziabad Airport", 
+  "Ghaziabad Airport",
   "Jalandhar Airport",
   "General Inquiry",
   "Corporate Partnership",
-  "Feedback & Suggestions"
+  "Feedback & Suggestions",
 ];
 
 const Contact = () => {
@@ -40,29 +40,30 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema)
+    resolver: zodResolver(contactSchema),
   });
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
       toast({
         title: "Message Sent Successfully!",
-        description: "Thank you for contacting Eat&Fly. We'll get back to you within 24 hours.",
+        description:
+          "Thank you for contacting Eat&Fly. We'll get back to you within 24 hours.",
       });
-      
+
       reset();
     } catch (error) {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again later.",
-        variant: "destructive"
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -73,27 +74,30 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 98765 43210", "+91 98765 43211"],
-      description: "Available 24/7 for urgent matters"
+      details: ["+91 88721 94747"],
+      description: "Available 24/7 for urgent matters",
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@eatandfly.com", "support@eatandfly.com"],
-      description: "We respond within 24 hours"
+      details: [
+        "khelaenterprises.aip@gmail.com",
+        "khelaenterprises.hindon@gmail.com",
+      ],
+      description: "We respond within 24 hours",
     },
-    {
-      icon: MapPin,
-      title: "Headquarters",
-      details: ["Sector 18, Noida", "Uttar Pradesh, India"],
-      description: "Business hours: 9 AM - 6 PM"
-    },
+    // {
+    //   icon: MapPin,
+    //   title: "Headquarters",
+    //   details: ["Sector 18, Noida", "Uttar Pradesh, India"],
+    //   description: "Business hours: 9 AM - 6 PM",
+    // },
     {
       icon: Clock,
       title: "Customer Support",
       details: ["24/7 Airport Support", "9 AM - 6 PM Office Hours"],
-      description: "Always here to help"
-    }
+      description: "Always here to help",
+    },
   ];
 
   return (
@@ -101,15 +105,13 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="bg-white/10 text-white border-white/20 mb-6">
+          <Badge className="text-md bg-white/10 text-white border-white/20 mb-6">
             Get In Touch
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Contact Us
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-            Have questions, feedback, or want to learn more about Eat&Fly? 
-            We'd love to hear from you. Reach out and we'll respond promptly.
+            Have questions, feedback, or want to learn more about Eat&Fly? We'd
+            love to hear from you. Reach out and we'll respond promptly.
           </p>
         </div>
       </section>
@@ -122,9 +124,12 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <Card className="bg-card/80 backdrop-blur-sm shadow-medium">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-foreground">Send us a Message</CardTitle>
+                  <CardTitle className="text-2xl text-foreground">
+                    Send us a Message
+                  </CardTitle>
                   <p className="text-muted-foreground">
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Fill out the form below and we'll get back to you as soon as
+                    possible.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -139,7 +144,9 @@ const Contact = () => {
                           className={errors.name ? "border-destructive" : ""}
                         />
                         {errors.name && (
-                          <p className="text-sm text-destructive">{errors.name.message}</p>
+                          <p className="text-sm text-destructive">
+                            {errors.name.message}
+                          </p>
                         )}
                       </div>
 
@@ -153,7 +160,9 @@ const Contact = () => {
                           className={errors.email ? "border-destructive" : ""}
                         />
                         {errors.email && (
-                          <p className="text-sm text-destructive">{errors.email.message}</p>
+                          <p className="text-sm text-destructive">
+                            {errors.email.message}
+                          </p>
                         )}
                       </div>
                     </div>
@@ -168,7 +177,9 @@ const Contact = () => {
                           className={errors.phone ? "border-destructive" : ""}
                         />
                         {errors.phone && (
-                          <p className="text-sm text-destructive">{errors.phone.message}</p>
+                          <p className="text-sm text-destructive">
+                            {errors.phone.message}
+                          </p>
                         )}
                       </div>
 
@@ -187,7 +198,9 @@ const Contact = () => {
                           ))}
                         </select>
                         {errors.outlet && (
-                          <p className="text-sm text-destructive">{errors.outlet.message}</p>
+                          <p className="text-sm text-destructive">
+                            {errors.outlet.message}
+                          </p>
                         )}
                       </div>
                     </div>
@@ -201,7 +214,9 @@ const Contact = () => {
                         className={errors.subject ? "border-destructive" : ""}
                       />
                       {errors.subject && (
-                        <p className="text-sm text-destructive">{errors.subject.message}</p>
+                        <p className="text-sm text-destructive">
+                          {errors.subject.message}
+                        </p>
                       )}
                     </div>
 
@@ -215,12 +230,14 @@ const Contact = () => {
                         className={errors.message ? "border-destructive" : ""}
                       />
                       {errors.message && (
-                        <p className="text-sm text-destructive">{errors.message.message}</p>
+                        <p className="text-sm text-destructive">
+                          {errors.message.message}
+                        </p>
                       )}
                     </div>
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-gradient-primary hover:shadow-glow transition-smooth"
                     >
@@ -241,7 +258,9 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Contact Information</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Contact Information
+                </h3>
                 <p className="text-muted-foreground">
                   Reach out through any of these channels. We're here to help!
                 </p>
@@ -249,18 +268,27 @@ const Contact = () => {
 
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50">
+                  <Card
+                    key={index}
+                    className="bg-card/50 backdrop-blur-sm border-border/50"
+                  >
                     <CardContent className="p-4">
                       <div className="flex items-start space-x-3">
                         <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
                           <info.icon className="h-5 w-5 text-primary" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
+                          <h4 className="font-semibold text-foreground mb-1">
+                            {info.title}
+                          </h4>
                           {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-sm text-foreground">{detail}</p>
+                            <p key={idx} className="text-sm text-foreground">
+                              {detail}
+                            </p>
                           ))}
-                          <p className="text-xs text-muted-foreground mt-1">{info.description}</p>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            {info.description}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -271,10 +299,12 @@ const Contact = () => {
               {/* Quick Response Promise */}
               <Card className="bg-gradient-primary text-white">
                 <CardContent className="p-4 text-center">
-                  <h4 className="font-semibold mb-2">Quick Response Guarantee</h4>
+                  <h4 className="font-semibold mb-2">
+                    Quick Response Guarantee
+                  </h4>
                   <p className="text-sm text-white/90">
-                    We respond to all inquiries within 24 hours. For urgent matters, 
-                    call our 24/7 airport support line.
+                    We respond to all inquiries within 24 hours. For urgent
+                    matters, call our 24/7 airport support line.
                   </p>
                 </CardContent>
               </Card>
@@ -287,7 +317,10 @@ const Contact = () => {
       <section className="py-16 bg-gradient-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
-            <Badge variant="outline" className="text-primary border-primary/20">
+            <Badge
+              variant="outline"
+              className="text-md text-primary border-primary/20"
+            >
               Common Questions
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -298,40 +331,50 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
-                <h4 className="font-semibold text-foreground mb-2">What are your operating hours?</h4>
+                <h4 className="font-semibold text-foreground mb-2">
+                  What are your operating hours?
+                </h4>
                 <p className="text-muted-foreground text-sm">
-                  Our outlets operate according to airport schedules. Most locations are open 24/7, 
-                  while others operate from early morning to late night.
+                  Our outlets operate according to airport schedules. Most
+                  locations are open 24/7, while others operate from early
+                  morning to late night.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
-                <h4 className="font-semibold text-foreground mb-2">Do you offer pre-ordering?</h4>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Do you offer pre-ordering?
+                </h4>
                 <p className="text-muted-foreground text-sm">
-                  Yes! Pre-ordering is available at select locations. This helps reduce wait times 
-                  and ensures your meal is ready when you arrive.
+                  Yes! Pre-ordering is available at select locations. This helps
+                  reduce wait times and ensures your meal is ready when you
+                  arrive.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
-                <h4 className="font-semibold text-foreground mb-2">Are there vegetarian options?</h4>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Are there vegetarian options?
+                </h4>
                 <p className="text-muted-foreground text-sm">
-                  Absolutely! We offer a wide range of vegetarian and vegan options, 
-                  clearly marked on our menu at all locations.
+                  Absolutely! We offer a wide range of vegetarian and vegan
+                  options, clearly marked on our menu at all locations.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
-                <h4 className="font-semibold text-foreground mb-2">Can I provide feedback?</h4>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Can I provide feedback?
+                </h4>
                 <p className="text-muted-foreground text-sm">
-                  We welcome all feedback! Use the contact form above, speak with our staff, 
-                  or reach out directly via phone or email.
+                  We welcome all feedback! Use the contact form above, speak
+                  with our staff, or reach out directly via phone or email.
                 </p>
               </CardContent>
             </Card>

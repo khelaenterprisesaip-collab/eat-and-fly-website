@@ -96,7 +96,7 @@ const outlets = [
   {
     id: 4,
     city: "Ludhiana",
-    airport: "Ludhiana Airport",
+    airport: "Sahnewal Airport",
     status: "upcoming",
     terminal: "New Terminal Building",
     address: "Departure Lounge (Under Construction)",
@@ -126,7 +126,7 @@ const Outlets = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="bg-white/10 text-white border-white/20 mb-6">
+          <Badge className="text-md bg-white/10 text-white border-white/20 mb-6">
             Our Locations
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -146,9 +146,9 @@ const Outlets = () => {
           <div className="text-center space-y-4 mb-12">
             <Badge
               variant="outline"
-              className="text-success border-success/20 bg-success/5"
+              className="text-md text-success border-success/20 bg-success/5"
             >
-              <CheckCircle className="h-3 w-3 mr-1" />
+              <CheckCircle className="h-5 w-5 mr-1" />
               Currently Operational
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -267,8 +267,11 @@ const Outlets = () => {
       <section className="py-16 bg-gradient-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
-            <Badge variant="outline" className="text-primary border-primary/20">
-              <Calendar className="h-3 w-3 mr-1" />
+            <Badge
+              variant="outline"
+              className="text-md text-primary border-primary/20"
+            >
+              <Calendar className="h-5 w-5 mr-1" />
               Coming Soon
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">

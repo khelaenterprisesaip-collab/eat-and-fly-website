@@ -28,12 +28,12 @@ const WhyChooseUs = () => {
       description:
         "Award-winning cuisine that has earned recognition from travelers and food critics alike. Quality you can taste in every bite.",
     },
-    {
-      icon: Wifi,
-      title: "Modern Amenities",
-      description:
-        "Free WiFi, charging ports, and comfortable seating. Everything you need to relax and stay connected while takeaway.",
-    },
+    // {
+    //   icon: Wifi,
+    //   title: "Modern Amenities",
+    //   description:
+    //     "Free WiFi, charging ports, and comfortable seating. Everything you need to relax and stay connected while takeaway.",
+    // },
     {
       icon: CreditCard,
       title: "Convenient Payment",
@@ -47,7 +47,10 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
-          <Badge variant="outline" className="text-primary border-primary/20">
+          <Badge
+            variant="outline"
+            className="text-md text-primary border-primary/20"
+          >
             Why Choose Eat&Fly
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">

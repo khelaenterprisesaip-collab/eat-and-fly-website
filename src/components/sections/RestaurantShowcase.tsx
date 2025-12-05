@@ -34,7 +34,10 @@ const RestaurantShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
-          <Badge variant="outline" className="text-primary border-primary/20">
+          <Badge
+            variant="outline"
+            className="text-md text-primary border-primary/20"
+          >
             Our Restaurants
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -98,19 +101,14 @@ const RestaurantShowcase = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
           <div className="space-y-2">
             <div className="text-3xl font-bold text-primary">5+</div>
             <div className="text-sm text-muted-foreground">
               Restaurant Locations
             </div>
           </div>
-          <div className="space-y-2">
-            <div className="text-3xl font-bold text-primary">200+</div>
-            <div className="text-sm text-muted-foreground">
-              Seating Capacity
-            </div>
-          </div>
+
           <div className="space-y-2">
             <div className="text-3xl font-bold text-primary">24/7</div>
             <div className="text-sm text-muted-foreground">Service Hours</div>

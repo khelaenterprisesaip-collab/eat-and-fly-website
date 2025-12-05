@@ -59,7 +59,7 @@ const PhotoGallery = () => {
     },
     {
       src: restaurant3,
-      title: "Comfortable Seating",
+      title: "Quality Assurance",
       category: "Interior",
       className: "md:row-span-1", // Normal height
     },
@@ -85,7 +85,10 @@ const PhotoGallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-12 animate-fade-in">
-          <Badge variant="outline" className="text-primary border-primary/20">
+          <Badge
+            variant="outline"
+            className="text-md text-primary border-primary/20"
+          >
             Photo Gallery
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -98,7 +101,7 @@ const PhotoGallery = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 animate-scale-in">
+        {/* <div className="flex flex-wrap justify-center gap-2 mb-12 animate-scale-in">
           {categories.map((category) => (
             <button
               key={category}
@@ -112,7 +115,7 @@ const PhotoGallery = () => {
               {category}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Masonry Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">

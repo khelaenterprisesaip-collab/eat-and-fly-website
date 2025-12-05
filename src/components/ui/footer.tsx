@@ -15,7 +15,7 @@ const Footer = () => {
     "Amritsar Airport",
     "Ghaziabad Airport",
     "Jalandhar Airport",
-    "Ludhiana Airport",
+    "Sahnewal Airport",
     "Jaisalmer Airport",
   ];
 
@@ -77,13 +77,13 @@ const Footer = () => {
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="h-4 w-4 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  info@eatandfly.com
+                  khelaenterprises.aip@gmail.com
                 </span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  +91 98765 43210
+                  +91 88721 94747
                 </span>
               </div>
             </div>

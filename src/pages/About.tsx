@@ -48,7 +48,7 @@ const About = () => {
         />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="bg-white/10 text-white border-white/20 mb-6">
+          <Badge className="text-md bg-white/10 text-white border-white/20 mb-6">
             Our Story
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Eat&Fly</h1>
@@ -88,7 +88,7 @@ const About = () => {
             <div className="space-y-6">
               <Badge
                 variant="outline"
-                className="text-primary border-primary/20"
+                className="text-md text-primary border-primary/20"
               >
                 Our Journey
               </Badge>
@@ -133,7 +133,10 @@ const About = () => {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
-            <Badge variant="outline" className="text-primary border-primary/20">
+            <Badge
+              variant="outline"
+              className="text-md text-primary border-primary/20"
+            >
               Our Values
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">

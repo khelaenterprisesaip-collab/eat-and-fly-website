@@ -60,7 +60,10 @@ const TravelExperience = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
-          <Badge variant="outline" className="text-primary border-primary/20">
+          <Badge
+            variant="outline"
+            className="text-md text-primary border-primary/20"
+          >
             Travel & Dine
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -174,7 +177,7 @@ const TravelExperience = () => {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                      className="bg-white/10 backdrop-blur-sm"
                     >
                       Contact Us
                     </Button>
