@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logor.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +27,12 @@ const Navigation = () => {
             to="/"
             className="flex items-center space-x-2 text-primary hover:text-primary-light transition-smooth group"
           >
-            <div className="shadow-soft group-hover:shadow-glow transition-smooth">
-              <img height={80} width={80} src="../../public/logor.png" />
+            <div className="relative shadow-soft group-hover:shadow-glow transition-smooth h-16 w-16">
+              <img
+                className="w-full h-full object-cover"
+                alt="Logo"
+                src={logo}
+              />
             </div>
             <span className="text-xl font-bold">Eat&Fly</span>
           </Link>

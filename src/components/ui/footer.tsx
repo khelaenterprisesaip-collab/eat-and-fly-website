@@ -1,5 +1,6 @@
 import { Plane, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logor.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,8 +27,12 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="">
-                <img height={80} width={80} src="../../public/logor.png" />
+              <div className="relative shadow-soft group-hover:shadow-glow transition-smooth h-16 w-16">
+                <img
+                  className="w-full h-full object-cover"
+                  alt="Logo"
+                  src={logo}
+                />
               </div>
               <span className="text-xl font-bold">Eat&Fly</span>
             </div>
