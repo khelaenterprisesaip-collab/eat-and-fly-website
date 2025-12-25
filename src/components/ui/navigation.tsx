@@ -22,12 +22,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center space-x-2 text-primary hover:text-primary-light transition-smooth group"
           >
-            <div className="p-1.5 bg-gradient-primary rounded-lg shadow-soft group-hover:shadow-glow transition-smooth">
-              <Plane className="h-6 w-6 text-white" />
+            <div className="shadow-soft group-hover:shadow-glow transition-smooth">
+              <img height={80} width={80} src="../../public/logor.png" />
             </div>
             <span className="text-xl font-bold">Eat&Fly</span>
           </Link>
@@ -61,7 +61,11 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="p-2"
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>

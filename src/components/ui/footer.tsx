@@ -26,8 +26,8 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="p-1.5 bg-white/10 rounded-lg">
-                <Plane className="h-6 w-6" />
+              <div className="">
+                <img height={80} width={80} src="../../public/logor.png" />
               </div>
               <span className="text-xl font-bold">Eat&Fly</span>
             </div>
